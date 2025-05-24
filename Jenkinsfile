@@ -28,7 +28,7 @@ pipeline {
         }
         stage('trivy fs scan') {
             steps {
-                echo 'trivy fs --format table -o fs.html .'
+                sh 'trivy fs --format table -o fs.html .'
             }
         }
         stage('sonarqube analyzis') {
